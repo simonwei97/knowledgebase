@@ -1,4 +1,8 @@
 site_name: 基础知识库
+
+repo_url: https://github.com/simonwei97/knowledgebase
+repo_name: simonwei97/knowledgebase
+
 theme:
   name: material
   palette:
