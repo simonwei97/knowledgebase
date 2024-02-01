@@ -1,0 +1,27 @@
+.md-typeset h1 {
+    font-size: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+    line-height: 1.2;
+    font-weight: 600;
+    flood-color: black;
+}
+
+.md-typeset h2 {
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+    line-height: 1.2;
+    font-weight: 400;
+    flood-color: black;
+}
+
+.md-typeset {
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+.youtube {
+    color: #EE0F0F;
+}
