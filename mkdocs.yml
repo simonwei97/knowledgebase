@@ -12,16 +12,18 @@ theme:
     - announce.dismiss
     - content.action.edit
     - content.action.view
-    - content.code.copy
-    - content.code.select
-    - content.code.annotate
+    - content.code.copy # Code blocks
+    - content.code.select # Code blocks
+    - content.code.annotate # Code blocks
     - navigation.footer
     - navigation.indexes
     - navigation.sections
     - navigation.tabs
     - content.tooltips
-    - content.footnote.tooltips
+    - content.footnote.tooltips # Footnotes
     - search.suggest
+    - navigation.top
+    - content.tabs.link
   icon:
     admonition:
       note: octicons/tag-16
@@ -48,33 +50,48 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
-  - glightbox
+  - glightbox # pip install mkdocs-glightbox
   - search
 
 markdown_extensions:
   - abbr
-  - attr_list
+  - admonition # Admonitions
+  - pymdownx.details # Admonitions
+  - attr_list # Annotations / Buttons / Attribute Lists
+  - md_in_html # Annotations/ Markdown in HTML
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - md_in_html
-  - tables
-  - footnotes
+  - tables # Tables
+  - footnotes # Footnotes
   - toc:
       permalink: true
-  - pymdownx.highlight:
+  - pymdownx.highlight: # Code blocks
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
+  - pymdownx.inlinehilite # Code blocks
+  - pymdownx.snippets # Code blocks
+  - pymdownx.superfences # Admonitions / Annotations / Content tabs / Code blocks
+  - pymdownx.tabbed: # Content tabs
       alternate_style: true
-  - def_list
-  - pymdownx.tasklist:
+  - def_list # List
+  - pymdownx.tasklist: # List
       custom_checkbox: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.critic # Formatting - Critic
+  - pymdownx.caret # Formatting - Caret
+  - pymdownx.keys # Formatting - Keys
+  - pymdownx.mark # Formatting - Mark
+  - pymdownx.tilde # Formatting - Tilde
+
+nav:
+  - Home: index.md
+
+copyright: Copyright &copy; 2023 - 2024 Simonwei97
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/simonwei97
