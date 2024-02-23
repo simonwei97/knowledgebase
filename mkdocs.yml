@@ -88,9 +88,9 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Kafka:
-      - 基础: kafka/base.md
-      - 高性能: kafka/high_performance.md
+  - 中间件:
+      - Kafka: middleware/kafka.md
+      - Redis: middleware/redis.md
   - Golang:
       - 垃圾回收 GC: golang/gc.md
   - Python:
