@@ -88,6 +88,14 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Kafka:
+      - 基础: kafka/base.md
+      - 高性能: kafka/high_performance.md
+  - Golang:
+      - 垃圾回收 GC: golang/gc.md
+  - Python:
+      - 基础: python/base.md
+      - 面试: python/interview.md
 
 copyright: Copyright &copy; 2023 - 2024 Simonwei97
 
