@@ -1,37 +1,19 @@
-# Welcome to MkDocs
+---
+hide:
+  - footer
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# 👏🏻欢迎来到我的知识库
 
-!!! note
+知识库整理了包括常见的中间件（Kafka，MySQL，Redis等）、编程语言Golang, Python 的基础知识，以备面试。
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+## 中间件
 
-=== "C"
+- :simple-apachekafka: [ **Kafka**](middleware/kafka.md)
+- :simple-redis: [**Redis**](middleware/redis.md)
 
-    ``` c
-    #include <stdio.h>
 
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
+## :material-file-code: 编程语言
 
-=== "C++"
-
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
-
-| Method   | Description                          |
-| -------- | ------------------------------------ |
-| `GET`    | :material-check:     Fetch resource  |
-| `PUT`    | :material-check-all: Update resource |
-| `DELETE` | :material-close:     Delete resource |
+- :fontawesome-brands-golang: [**Golang**](golang/base.md)
+- :simple-python: [**Python**](python/base.md)
