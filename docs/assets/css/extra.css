@@ -2,15 +2,23 @@
     font-size: 32px;
     font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: 800;
     flood-color: black;
 }
 
 .md-typeset h2 {
+    font-size: 28px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+    line-height: 1.2;
+    font-weight: 600;
+    flood-color: black;
+}
+
+.md-typeset h3 {
     font-size: 24px;
     font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
     line-height: 1.2;
-    font-weight: 400;
+    font-weight: 500;
     flood-color: black;
 }
 
@@ -21,7 +29,7 @@
 }
 
 
-
+/* YouTube Icon */
 .youtube {
     color: #EE0F0F;
 }
