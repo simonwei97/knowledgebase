@@ -45,9 +45,11 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/mathjax.js
-  - assets/javascripts/katex.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - assets/javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
 
 plugins:
   - glightbox # pip install mkdocs-glightbox
@@ -88,16 +90,57 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - 中间件:
-      - Kafka: middleware/kafka.md
-      - Redis: middleware/redis.md
+  - 网络:
+      - 基础: network/index.md
+      - Cookie和Session: network/cookie和session.md
+      - TCP/UDP: network/tcp_upd.md
+  - Kafka:
+      - Kafka基础: kafka/index.md
+      - Kafka优化: kafka/optimization.md
+  - Redis:
+      - 基础: redis/index.md
+      - 过期策略: redis/expire.md
+      - 持久化: redis/durability.md
+      - 高可用: redis/ha.md
+  - MySQL:
+      - 基础: mysql/index.md
+      - 索引: mysql/db_index.md
+      - 事务: mysql/transaction.md
+      - 锁: mysql/lock.md
+      - 日志: mysql/log.md
   - Golang:
-      - 垃圾回收 GC: golang/gc.md
+      - 基础: golang/index.md
+      - 垃圾回收GC: golang/gc.md
+      - GMP调度模型: golang/gmp.md
+      - 代码题目: golang/coding.md
   - Python:
-      - 基础: python/base.md
+      - 基础: python/index.md
       - 面试: python/interview.md
+  - LeetCode:
+      - 数组:
+          - 704. 二分查找: leetcode/704.md
+          - 27. 移除元素: leetcode/27.md
+          - 977. 有序数组的平方: leetcode/977.md
+          - 209. 长度最小的子数组: leetcode/209.md
+          - 59. 螺旋矩阵II: leetcode/59.md
+      - 链表:
+          - 2. 两数相加: leetcode/2.md
+          - 203. 移除链表元素: leetcode/203.md
+          - 206. 反转链表: leetcode/206.md
+          - 24. 两两交换链表中的节点: leetcode/24.md
+          - 19. 删除链表的倒数第N个节点: leetcode/19.md
+          - 160. 相交链表I: leetcode/160.md
+          - 141. 环形链表: leetcode/141.md
+          - 142. 环形链表 II: leetcode/142.md
+          - 25. K 个一组翻转链表: leetcode/25.md
+          - 82. 删除排序链表中的重复元素 II: leetcode/82.md
+          - 23. 合并 K 个升序链表: leetcode/23.md
+      - 二叉树:
+          - 基础: leetcode/binary_tree.md
+          - 226. 翻转二叉树: leetcode/226.md
+          - 104. 二叉树的最大深度: leetcode/104.md
 
-copyright: Copyright &copy; 2023 - 2024 Simonwei97
+copyright: Copyright &copy; 2023 - 2024 Simonwei97.
 
 extra:
   social:
