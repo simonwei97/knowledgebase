@@ -134,14 +134,20 @@ nav:
           - 142. 环形链表 II: leetcode/142.md
           - 25. K 个一组翻转链表: leetcode/25.md
           - 82. 删除排序链表中的重复元素 II: leetcode/82.md
+          - 21. 合并两个有序链表: leetcode/21.md
           - 23. 合并 K 个升序链表: leetcode/23.md
           - 146. LRU 缓存: leetcode/146.md
       - 二叉树:
           - 基础: leetcode/binary_tree.md
           - 226. 翻转二叉树: leetcode/226.md
-          - 104. 二叉树的最大深度: leetcode/104.md
           - 101. 对称二叉树: leetcode/101.md
+          - 104. 二叉树的最大深度: leetcode/104.md
           - 111. 二叉树的最小深度: leetcode/111.md
+      - 回溯:
+          - 51. N 皇后: leetcode/51.md
+          - 46. 全排列: leetcode/46.md
+      - 动态规划:
+          - 509. 斐波那契数: leetcode/509.md
 
 copyright: Copyright &copy; 2023 - 2024 Simonwei97.
 
