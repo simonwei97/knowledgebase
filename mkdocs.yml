@@ -137,12 +137,23 @@ nav:
           - 21. 合并两个有序链表: leetcode/21.md
           - 23. 合并 K 个升序链表: leetcode/23.md
           - 146. LRU 缓存: leetcode/146.md
+          - 148. 排序链表: leetcode/148.md
       - 二叉树:
           - 基础: leetcode/binary_tree.md
           - 226. 翻转二叉树: leetcode/226.md
           - 101. 对称二叉树: leetcode/101.md
           - 104. 二叉树的最大深度: leetcode/104.md
           - 111. 二叉树的最小深度: leetcode/111.md
+          - 543. 二叉树的直径: leetcode/543.md
+          - 98. 验证二叉搜索树: leetcode/98.md
+          - 199. 二叉树的右视图: leetcode/199.md
+          - 108. 将有序数组转换为二叉搜索树: leetcode/108.md
+          - 114. 二叉树展开为链表: leetcode/114.md
+          - 230. 二叉搜索树中第K小的元素: leetcode/230.md
+          - 105. 从前序与中序遍历序列构造二叉树: leetcode/105.md
+          - 437. 路径总和 III: leetcode/437.md
+          - 236. 二叉树的最近公共祖先: leetcode/236.md
+          - 124. 二叉树中的最大路径和: leetcode/124.md
       - 回溯:
           - 51. N 皇后: leetcode/51.md
           - 46. 全排列: leetcode/46.md
