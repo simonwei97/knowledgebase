@@ -19,11 +19,14 @@ theme:
     - navigation.indexes
     - navigation.sections
     - navigation.tabs
+    - navigation.instant
     - content.tooltips
     - content.footnote.tooltips # Footnotes
     - search.suggest
+    - search.highlight
     - navigation.top
     - content.tabs.link
+    - toc.follow
   icon:
     admonition:
       note: octicons/tag-16
@@ -109,13 +112,15 @@ nav:
       - 锁: mysql/lock.md
       - 日志: mysql/log.md
   - Golang:
-      - 基础: golang/index.md
+      - ./golang/index.md
       - 垃圾回收GC: golang/gc.md
       - GMP调度模型: golang/gmp.md
       - 代码题目: golang/coding.md
   - Python:
       - 基础: python/index.md
       - 面试: python/interview.md
+  - 经典算法:
+      - Top K 问题: algo/classic/topk.md
   - LeetCode:
       - 数组:
           - 704. 二分查找: leetcode/704.md
@@ -159,7 +164,8 @@ nav:
           - 46. 全排列: leetcode/46.md
       - 动态规划:
           - 509. 斐波那契数: leetcode/509.md
-
+  - Mac 配置:
+      - mac/index.md
 copyright: Copyright &copy; 2023 - 2024 Simonwei97.
 
 extra:
