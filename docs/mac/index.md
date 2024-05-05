@@ -68,5 +68,21 @@ neofetch
 brew install tmux
 ```
 
-- [tmux dracula 个性化配置](./tmux.md)
 - [tmux cheatsheet](https://tmuxcheatsheet.com/)
+- [Dark theme for tmux](https://draculatheme.com/tmux)
+- [tmux 配置文件分享](https://www.amjun.com/2382.html)
+- [github.comgpakosz/.tmux ](https://github.com/gpakosz/.tmux/blob/master/.tmux.conf)
+
+## ARM 电脑安装加速 Pytorch
+
+[Accelerated PyTorch training on Mac](https://developer.apple.com/metal/pytorch/)
+
+## 宁芝 Niz Plum 蓝牙连接
+
+### 第一次连接设备
+
+- 不要让键盘和电脑使用 USB 连接
+- 长按键盘电源键开启键盘
+- 打开电脑蓝牙连接
+- 按住键盘的 `Fn + Del` 至电源按钮左下方灯光持续闪烁，进入配对状态
+- 电脑界面提示输入 `6` 位数字并按 `Enter` 键确认即可连接

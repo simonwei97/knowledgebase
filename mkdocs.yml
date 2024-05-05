@@ -166,7 +166,6 @@ nav:
           - 509. 斐波那契数: leetcode/509.md
   - Mac 配置:
       - mac/index.md
-      - tmux个性化配置: mac/tmux.md
 copyright: Copyright &copy; 2023 - 2024 Simonwei97.
 
 extra:
