@@ -121,6 +121,7 @@ nav:
       - 面试: python/interview.md
   - 经典算法:
       - Top K 问题: algo/classic/topk.md
+      - 农夫过河问题: algo/classic/river_crossing.md
   - LeetCode:
       - 数组:
           - 704. 二分查找: leetcode/704.md
