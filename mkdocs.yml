@@ -161,6 +161,7 @@ nav:
           - 236. 二叉树的最近公共祖先: leetcode/236.md
           - 124. 二叉树中的最大路径和: leetcode/124.md
       - 回溯:
+          - 31. 下一个排列: leetcode/31.md
           - 51. N 皇后: leetcode/51.md
           - 46. 全排列: leetcode/46.md
       - 动态规划:
