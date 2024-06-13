@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
-          python-version: 3.x
-      - run: pip install mkdocs
-      - run: pip install mkdocs-material
-      - run: pip install mkdocs-glightbox
-      - run: mkdocs gh-deploy --force
+          python-version: 3.11
+      - run: pip install poetry
+      - run: poetry install
+      - name: Publish docs
+        run: poetry run mkdocs gh-deploy --force

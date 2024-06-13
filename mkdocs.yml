@@ -1,32 +1,37 @@
 site_name: 基础知识库
 
+site_author: simonwei97
+site_url: https://simonwei97.github.io/knowledgebase/
+
 repo_url: https://github.com/simonwei97/knowledgebase
 repo_name: simonwei97/knowledgebase
 
 theme:
   name: material
-  palette:
-    primary: indigo
+  language: zh
   font: false
   features:
     - announce.dismiss
     - content.action.edit
-    - content.action.view
+    # - content.action.view
     - content.code.copy # Code blocks
     - content.code.select # Code blocks
     - content.code.annotate # Code blocks
-    - navigation.footer
-    - navigation.indexes
-    - navigation.sections
-    - navigation.tabs
+    # - navigation.sections
     - navigation.instant
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
     - content.tooltips
-    - content.footnote.tooltips # Footnotes
+    # - content.footnote.tooltips # Footnotes
     - search.suggest
     - search.highlight
-    - navigation.top
-    - content.tabs.link
+    - search.highlight
+    - search.share
+    - search.suggest
     - toc.follow
+    # - toc.integrate
   icon:
     admonition:
       note: octicons/tag-16
@@ -41,22 +46,49 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+  palette:
+    - scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/theme-light-dark
+        name: 深色模式
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/theme-light-dark
+        name: 浅色模式
 
 extra_css:
   - assets/css/extra.css
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 
 extra_javascript:
   - assets/javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - assets/javascripts/katex.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # - assets/javascripts/katex.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
 
 plugins:
-  - glightbox # pip install mkdocs-glightbox
   - search
+  - include_dir_to_nav
+  - mkdocs-jupyter:
+      execute: false
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: none
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: false
+      auto_caption: false
+      caption_position: bottom
 
 markdown_extensions:
   - abbr
@@ -91,11 +123,12 @@ markdown_extensions:
   - pymdownx.mark # Formatting - Mark
   - pymdownx.tilde # Formatting - Tilde
 
+
 nav:
-  - Home: index.md
+  # - Home: index.md
   - 网络:
       - 基础: network/index.md
-      - Cookie和Session: network/cookie和session.md
+      - Cookie和Session: network/cookie_session.md
       - TCP/UDP: network/tcp_upd.md
   - Kafka:
       - Kafka基础: kafka/index.md
@@ -167,7 +200,10 @@ nav:
       - 动态规划:
           - 509. 斐波那契数: leetcode/509.md
   - Mac 配置:
-      - mac/index.md
+      - 基础配置: mac/index.md
+      - 机器学习: mac/ml.md
+      - 宁芝 Niz键盘: mac/niz.md
+
 copyright: Copyright &copy; 2023 - 2024 Simonwei97.
 
 extra:
