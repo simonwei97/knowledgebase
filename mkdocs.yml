@@ -162,6 +162,7 @@ nav:
           - 977. 有序数组的平方: leetcode/977.md
           - 209. 长度最小的子数组: leetcode/209.md
           - 59. 螺旋矩阵II: leetcode/59.md
+          - 253. 会议室II: leetcode/253.md
       - 链表:
           - 2. 两数相加: leetcode/2.md
           - 203. 移除链表元素: leetcode/203.md
