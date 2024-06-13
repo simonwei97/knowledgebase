@@ -65,4 +65,4 @@ Token 的意思是“令牌”，是服务端生成的一串字符串，作为�
 
 ==}
 
-[^1]: [你真的了解 Cookie 和 Session 吗?](https://www.cnblogs.com/ityouknow/p/10856177.html)
+- [你真的了解 Cookie 和 Session 吗?](https://www.cnblogs.com/ityouknow/p/10856177.html)

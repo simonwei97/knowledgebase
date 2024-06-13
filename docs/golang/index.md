@@ -362,4 +362,4 @@ old\_cap + \frac{old\_cap+3*threshold}{4} & if \ old\_cap > threshold \\
 \end{cases}
 $$
 
-[^1]: [Go 语言 unsafe.Pointer 浅析](https://juejin.cn/post/7083853142403579911)
+- [Go 语言 unsafe.Pointer 浅析](https://juejin.cn/post/7083853142403579911)

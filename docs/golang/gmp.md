@@ -240,4 +240,4 @@ G1 本地队列 G5、G6 已经被其他 M 偷走并运行完成，当前 M1 和 
 上述`G8`如果执行完毕，此时 M2 会首先寻找之前的 P，如果没有则尝试从`空闲p队列`中获取，如果没获取不到，会进入`M阻塞队列`中（长时间休眠等待 GC 回收销毁）
 ![](../assets/img/gmp/gmp_cond_11.png)
 
-[^1]: 参考 [golang 大杀器——GMP 模型](https://github.com/fengyuan-liang/notes/blob/main/GoLang/golang%E5%A4%A7%E6%9D%80%E5%99%A8GMP%E6%A8%A1%E5%9E%8B.md)
+- 参考 [golang 大杀器——GMP 模型](https://github.com/fengyuan-liang/notes/blob/main/GoLang/golang%E5%A4%A7%E6%9D%80%E5%99%A8GMP%E6%A8%A1%E5%9E%8B.md)

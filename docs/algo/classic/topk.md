@@ -76,4 +76,4 @@ def quick_sort(self, nums: list[int], left: int, right: int):
 
 ```
 
-[^1]: [https://www.hello-algo.com/chapter_sorting/quick_sort/](https://www.hello-algo.com/chapter_sorting/quick_sort/)
+- [https://www.hello-algo.com/chapter_sorting/quick_sort/](https://www.hello-algo.com/chapter_sorting/quick_sort/)

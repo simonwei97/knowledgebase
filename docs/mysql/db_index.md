@@ -120,4 +120,4 @@ count(1)、 count(\*)、 count(主键字段)在执行的时候，如果表里存
 - 近似值：可以使用 ` show table status`` 或者  `explain`` 命令来表进行估算。
 - 额外表保存计数值：想精确的获取表的记录总数，可以将这个计数值保存到单独的一张计数表中
 
-[^1]: [小林 coding-索引常见面试题](https://xiaolincoding.com/mysql/index/index_interview.html)
+- [小林 coding-索引常见面试题](https://xiaolincoding.com/mysql/index/index_interview.html)

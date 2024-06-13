@@ -10,6 +10,8 @@ theme:
   name: material
   language: zh
   font: false
+  logo: assets/img/logo.png
+  favicon: assets/img/favicon.png
   features:
     - announce.dismiss
     - content.action.edit
@@ -32,6 +34,7 @@ theme:
     - search.suggest
     - toc.follow
     # - toc.integrate
+    - content.tabs.link
   icon:
     admonition:
       note: octicons/tag-16
@@ -123,21 +126,12 @@ markdown_extensions:
   - pymdownx.mark # Formatting - Mark
   - pymdownx.tilde # Formatting - Tilde
 
-
 nav:
-  # - Home: index.md
-  - 网络:
+  - 主页: index.md
+  - 计算机网络:
       - 基础: network/index.md
       - Cookie和Session: network/cookie_session.md
       - TCP/UDP: network/tcp_upd.md
-  - Kafka:
-      - Kafka基础: kafka/index.md
-      - Kafka优化: kafka/optimization.md
-  - Redis:
-      - 基础: redis/index.md
-      - 过期策略: redis/expire.md
-      - 持久化: redis/durability.md
-      - 高可用: redis/ha.md
   - MySQL:
       - 基础: mysql/index.md
       - 索引: mysql/db_index.md
@@ -152,10 +146,19 @@ nav:
   - Python:
       - 基础: python/index.md
       - 面试: python/interview.md
+  - Kafka:
+      - Kafka基础: kafka/index.md
+      - Kafka优化: kafka/optimization.md
+  - Redis:
+      - 基础: redis/index.md
+      - 过期策略: redis/expire.md
+      - 持久化: redis/durability.md
+      - 高可用: redis/ha.md
   - 经典算法:
       - Top K 问题: algo/classic/topk.md
       - 农夫过河问题: algo/classic/river_crossing.md
   - LeetCode:
+      - leetcode/index.md
       - 数组:
           - 704. 二分查找: leetcode/704.md
           - 27. 移除元素: leetcode/27.md
@@ -200,9 +203,12 @@ nav:
           - 46. 全排列: leetcode/46.md
       - 动态规划:
           - 509. 斐波那契数: leetcode/509.md
+  - LLM:
+      - llm/index.md
   - Mac 配置:
       - 基础配置: mac/index.md
       - 机器学习: mac/ml.md
+      - 镜像源配置: mac/mirror.md
       - 宁芝 Niz键盘: mac/niz.md
 
 copyright: Copyright &copy; 2023 - 2024 Simonwei97.

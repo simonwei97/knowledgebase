@@ -165,4 +165,4 @@ MySQL 引入了** binlog 组提交（group commit）机制**，当有多个事�
 - 将 sync_binlog 设置为大于 1 的值（比较常见是 100~1000），表示每次提交事务都 write，但累积 N 个事务后才 fsync，相当于延迟了 binlog 刷盘的时机。但是这样做的风险是，主机掉电时会丢 N 个事务的 binlog 日志。
 - 将 `innodb_flush_log_at_trx_commit` 设置为 2。表示每次事务提交时，都只是缓存在 redo log buffer 里的 redo log 写到 redo log 文件。但是这样做的风险是，主机掉电的时候会丢数据。
 
-[^1]: [小林 coding: 图解 MySQL-日志篇](https://xiaolincoding.com/mysql/log/how_update.html)
+- [小林 coding: 图解 MySQL-日志篇](https://xiaolincoding.com/mysql/log/how_update.html)

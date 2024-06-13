@@ -118,4 +118,4 @@ Redis 提供了两个命令来生成 RDB 文件，分别是 save 和 bgsave，�
 - AOF 文件中添加了 RDB 格式的内容，使得 AOF 文件的可读性变得很差；
 - 兼容性差，如果开启混合持久化，那么此混合持久化 AOF 文件，就不能用在 Redis 4.0 之前版本了。
 
-[^1]: [小林 coding - 图解 Redis：持久化篇](https://xiaolincoding.com/redis/storage/aof.html)
+- [小林 coding - 图解 Redis：持久化篇](https://xiaolincoding.com/redis/storage/aof.html)

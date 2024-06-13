@@ -1,5 +1,5 @@
 
+## Apple Silicon 安装加速 PyTorch
 
-## ARM 电脑安装加速 Pytorch
+- [Accelerated PyTorch training on Mac](https://developer.apple.com/metal/pytorch/)
 
-[Accelerated PyTorch training on Mac](https://developer.apple.com/metal/pytorch/)

@@ -31,4 +31,4 @@ OSI 七层模型：**物理层、数据链路层、网络层、传输层、会�
 
 ![网络模型](../assets/img/network_mode.png)
 
-[^1]: [深入理解 TCP/IP 模型](https://zhuanlan.zhihu.com/p/33797520)
+- [深入理解 TCP/IP 模型](https://zhuanlan.zhihu.com/p/33797520)
