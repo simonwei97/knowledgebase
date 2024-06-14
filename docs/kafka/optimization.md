@@ -1,11 +1,6 @@
 ---
-date: 2024-01-02
 categories:
   - Kafka
-search:
-  boost: 2
-hide:
-  - footer
 ---
 
 ## 如何防止消息丢失？
