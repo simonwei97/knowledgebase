@@ -1,4 +1,4 @@
-site_name: 基础知识库
+site_name: 个人知识库
 
 site_author: simonwei97
 site_url: https://simonwei97.github.io/knowledgebase/
@@ -26,7 +26,7 @@ theme:
     - navigation.top
     - navigation.footer
     - content.tooltips
-    # - content.footnote.tooltips # Footnotes
+    - content.footnote.tooltips # Footnotes
     - search.suggest
     - search.highlight
     - search.highlight
@@ -147,15 +147,21 @@ nav:
   - Python:
       - 基础: python/index.md
       - 面试: python/interview.md
-  - Kafka:
-      - Kafka基础: kafka/index.md
-      - Kafka高性能和高可用: kafka/ha_hp.md
-      - Kafka优化: kafka/optimization.md
+  - 消息队列:
+      - Kafka:
+          - Kafka基础: kafka/index.md
+          - Kafka高性能和高可用: kafka/ha_hp.md
+          - Kafka优化: kafka/optimization.md
   - Redis:
       - 基础: redis/index.md
       - 过期策略: redis/expire.md
       - 持久化: redis/durability.md
       - 高可用: redis/ha.md
+  - 云原生:
+      - Docker:
+          - 基础: cloud_native/docker/base.md
+      - Kubernetes:
+          - cloud_native/k8s/service.md
   - 经典算法:
       - Top K 问题: algo/classic/topk.md
       - 农夫过河问题: algo/classic/river_crossing.md
@@ -207,6 +213,7 @@ nav:
           - 509. 斐波那契数: leetcode/509.md
   - LLM:
       - llm/index.md
+      - Paper论文: llm/paper.md
   - Mac 配置:
       - 基础配置: mac/index.md
       - 机器学习: mac/ml.md
@@ -221,7 +228,7 @@ extra:
       link: https://github.com/simonwei97
   consent:
     title: Cookie consent
-    description: >- 
+    description: >-
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to

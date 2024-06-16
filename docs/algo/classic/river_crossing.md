@@ -150,3 +150,5 @@ if __name__ == "__main__":
     print("finish search, find " + str(scheme_count) + " scheme")
 
 ```
+
+- [农夫过河问题 Python实现解题](https://juejin.cn/post/6844903510698360840)

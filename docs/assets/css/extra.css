@@ -128,7 +128,8 @@ body {
 /* max height of code block */
 /* https://github.com/squidfunk/mkdocs-material/issues/3444 */
 .md-typeset pre > code {
-    max-height: 25rem;
+    /* max-height: 25rem; */
+    max-height: 50rem;
 }
 
 /* Make the picture not glare in dark theme */
