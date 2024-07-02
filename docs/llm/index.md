@@ -1,6 +1,12 @@
 
 # LLM知识总结
 
+## LLM
+
+1. kaggle
+2. https://github.com/labmlai/annotated_deep_learning_paper_implementations?tab=readme-ov-file
+3. optuna
+4. wandb
 
 ## LLM为什么大多都是 Decoder-only 架构
 
