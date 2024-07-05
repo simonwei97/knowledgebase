@@ -4,7 +4,7 @@ categories:
 ---
 ## 安装 Xcode
 
-在应用商店中安装更新Xode，或者在安装 HomeBrew时，内部自动安装、更新 `Xode Command Line Tool`。
+在应用商店中安装更新 **Xode**，或者在安装 **HomeBrew** 时，内部自动安装、更新 **Xode Command Line Tool**。
 
 ## [Homebrew](https://brew.sh/)
 
@@ -27,12 +27,14 @@ brew install git
 
 ## 终端工具
 
-- iTerm2: https://iterm2.com/
-- WezTerm: https://wezfurlong.org/wezterm/index.html
-- Warp: https://www.warp.dev/
-- Alacritty: https://alacritty.org/
+- [iTerm2](https://iterm2.com/)
+- [WezTerm](https://wezfurlong.org/wezterm/index.html)
+- [Warp](https://www.warp.dev/)
+- [Alacritty](https://alacritty.org/)
 
-## 终端美化
+## ZSH终端美化
+
+ZSH: [https://www.zsh.org/](https://www.zsh.org/)
 
 ### [Oh-My-Zsh](https://ohmyz.sh/)
 
@@ -41,7 +43,32 @@ brew install git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-starship 和 powerlevel10k 二选一即可。
+### 插件
+
+[Zsh community projects.](https://github.com/zsh-users)
+
+- zsh-syntax-highlighting
+- zsh-autosuggestions
+- zsh-completions
+
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+```
+
+```bash title="~/.zshrc"
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-completions
+)
+```
+
+**starship** 和 **powerlevel10k** 二选一即可。
 
 ### [starship](https://github.com/starship/starship)
 
@@ -63,6 +90,17 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
+## Vim
+
+
+### Vim美化
+
+```bash
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+```
+
+> [The Ultimate vimrc](https://github.com/amix/vimrc)
 
 ## neofetch
 
@@ -90,20 +128,25 @@ brew install tmux
 
 ## Docker相关
 
-OrbStack: https://orbstack.dev/
+- OrbStack: [https://orbstack.dev/](https://orbstack.dev/)
 
-更加轻量搞笑的 MacOS Docker工具。
+更加轻量、高效的 MacOS Docker工具。
 
 ## Conda
 
-Anaconda或者 MiniConda，MiniConda更加轻量化。Anaconda包含了更多的科学计算的工具包，安装包大，安装过程也比较繁琐。
+- **Anaconda**: 
+  - 包含了更多的科学计算的工具包，安装包大，安装过程也比较繁琐。
+  - [https://www.anaconda.com/download/success](https://www.anaconda.com/download/success)
+- **Miniconda**: 
+  - 更加轻量化
+  - [https://docs.anaconda.com/miniconda/](https://docs.anaconda.com/miniconda/)
 
-- miniconda: https://docs.anaconda.com/miniconda/
 
+## VS Code
 
-## VsCode
+- 勾选符合自己版本下载。
+- 下载：[https://code.visualstudio.com/#alt-downloads](https://code.visualstudio.com/#alt-downloads)
 
-下载应用：https://code.visualstudio.com/#alt-downloads。勾选☑️符合自己平台的版本下载。
 
 应用下载后添加配置
 
@@ -113,6 +156,6 @@ Anaconda或者 MiniConda，MiniConda更加轻量化。Anaconda包含了更多的
 }
 ```
 
-### VsCode CLI
+### VS Code CLI
 
 `command + shift + p` 之后搜索 code，选择 `Shell Command: Install 'code' command in PATH`。
