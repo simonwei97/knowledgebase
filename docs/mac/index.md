@@ -32,7 +32,7 @@ brew install git
 - [Warp](https://www.warp.dev/)
 - [Alacritty](https://alacritty.org/)
 
-## ZSH终端美化
+## ZSH 优化
 
 ZSH: [https://www.zsh.org/](https://www.zsh.org/)
 
@@ -68,11 +68,12 @@ plugins=(
 )
 ```
 
-**starship** 和 **powerlevel10k** 二选一即可。
+### 主题
 
-### [starship](https://github.com/starship/starship)
+[starship](https://github.com/starship/starship) 和 [powerlevel10k](https://github.com/romkatv/powerlevel10k) 二选一即可。
 
-```bash
+
+```bash title="starship"
 # 安装最新版本
 curl -sS https://starship.rs/install.sh | sh
 
@@ -80,9 +81,7 @@ curl -sS https://starship.rs/install.sh | sh
 eval "$(starship init zsh)"
 ```
 
-### [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-
-```bash
+```bash title="powerlevel10k"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
@@ -90,10 +89,10 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
-## Vim
 
+## VIM
 
-### Vim美化
+### VIM 美化
 
 ```bash
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -134,11 +133,12 @@ brew install tmux
 
 ## Conda
 
-- **Anaconda**: 
-  - 包含了更多的科学计算的工具包，安装包大，安装过程也比较繁琐。
+**Anaconda**
+: - 包含了更多的科学计算的工具包，安装包大，安装过程也比较繁琐。
   - [https://www.anaconda.com/download/success](https://www.anaconda.com/download/success)
-- **Miniconda**: 
-  - 更加轻量化
+
+**Miniconda**: 
+:  - 更加轻量化
   - [https://docs.anaconda.com/miniconda/](https://docs.anaconda.com/miniconda/)
 
 

@@ -1,4 +1,4 @@
-## VS Code配置文件
+# VS Code 配置文件
 
 ```json title="setting.json"
 {
