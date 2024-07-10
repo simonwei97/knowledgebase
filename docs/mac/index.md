@@ -131,16 +131,6 @@ brew install tmux
 
 更加轻量、高效的 MacOS Docker工具。
 
-## Conda
-
-**Anaconda**
-: - 包含了更多的科学计算的工具包，安装包大，安装过程也比较繁琐。
-  - [https://www.anaconda.com/download/success](https://www.anaconda.com/download/success)
-
-**Miniconda**: 
-:  - 更加轻量化
-  - [https://docs.anaconda.com/miniconda/](https://docs.anaconda.com/miniconda/)
-
 
 ## VS Code
 

@@ -14,6 +14,7 @@ categories:
 ![](../assets/img/mac/iterm2/key_mappings.png)
 
 修改 `option <-` 和 `option ->`。 Action 选择为 **Send Escape Sequence**。
+
 - `option <-` 对应 **b**
 - `option ->` 对应 **f**
 
