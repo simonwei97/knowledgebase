@@ -59,6 +59,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 ```
 
+安装完成后，修改 `~/.zshrc` 文件。
+
 ```bash title="~/.zshrc"
 plugins=( 
     # other plugins...
@@ -77,7 +79,7 @@ plugins=(
 # 安装最新版本
 curl -sS https://starship.rs/install.sh | sh
 
-# 初始化
+# 初始化, 需要将此命令追加到 ~/.zshrc 文件中
 eval "$(starship init zsh)"
 ```
 
