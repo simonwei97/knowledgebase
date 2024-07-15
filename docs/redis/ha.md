@@ -64,5 +64,8 @@ Redis 在 2.8 版本以后提供的**哨兵（Sentinel）机制**，它的作用
 - 第三步：将新主节点的 IP 地址和信息，通过「发布者/订阅者机制」通知给客户端；
 - 第四步：继续监视旧主节点，当这个旧主节点重新上线时，将它设置为新主节点的从节点；
 
+---
+## 参考
+
 - [小林 coding - 图解 Redis：主从复制是怎么实现的？](https://xiaolincoding.com/redis/cluster/master_slave_replication.html)
 - [小林 coding - 图解 Redis：为什么要有哨兵？](https://xiaolincoding.com/redis/cluster/master_slave_replication.html)

@@ -75,5 +75,6 @@ Redis 内存淘汰策略共有八种，这八种策略大体分为「不进行�
         - 优点：设置之后立即生效，不需要重启 Redis 服务；缺点：重启 Redis 之后，设置就会失效。
     - 方式二：通过修改 Redis 配置文件修改，设置 `#!bash maxmemory-policy <策略>`
         - 优点：重启 Redis 服务后配置不会丢失；缺点：必须重启 Redis 服务，设置才能生效。
-
+---
+## 参考
 - [小林 coding: 图解 Redis 介绍](https://xiaolincoding.com/redis/)
