@@ -32,18 +32,17 @@ brew install git
 - [Warp](https://www.warp.dev/)
 - [Alacritty](https://alacritty.org/)
 
-## ZSH 优化
+## zsh 优化
 
-ZSH: [https://www.zsh.org/](https://www.zsh.org/)
-
-### [Oh-My-Zsh](https://ohmyz.sh/)
+- zsh: [https://www.zsh.org/](https://www.zsh.org/)
+- [Oh-My-Zsh](https://ohmyz.sh/)
 
 ```bash
 # 安装 Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### 插件
+**插件**
 
 [Zsh community projects.](https://github.com/zsh-users)
 
@@ -70,7 +69,7 @@ plugins=(
 )
 ```
 
-### 主题
+**主题**
 
 [starship](https://github.com/starship/starship) 和 [powerlevel10k](https://github.com/romkatv/powerlevel10k) 二选一即可。
 
@@ -92,9 +91,7 @@ git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
 
-## VIM
-
-### VIM 美化
+## Vim
 
 ```bash
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -148,6 +145,6 @@ brew install tmux
 }
 ```
 
-### VS Code CLI
+**VS Code Cli**
 
 `command + shift + p` 之后搜索 code，选择 `Shell Command: Install 'code' command in PATH`。
