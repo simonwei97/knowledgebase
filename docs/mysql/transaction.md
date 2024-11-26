@@ -89,4 +89,7 @@ MVCC 的目的就是多版本并发控制，在数据库中的实现，就是为
 - trx_id：用来存储每次对某条聚簇索引记录进行修改的时候的事物 Id
 - roll_pointer：每次对那条索引记录上有修改的时候，都会把老版本写入 undo 日志中。这个 roll_pointer 就是存了一个指针，它指向这条索引记录的上一个版本的位置，通过它来获得上一个版本的记录信息（注意插入操作的 undo 日志没有这个属性，因为它没有老版本）
 
+---
+## 参考
+
 - [小林 coding-图解 MySQL 事务篇](https://xiaolincoding.com/mysql/transaction/mvcc.html)

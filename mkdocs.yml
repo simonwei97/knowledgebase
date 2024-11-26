@@ -139,14 +139,15 @@ nav:
       - 事务: mysql/transaction.md
       - 锁: mysql/lock.md
       - 日志: mysql/log.md
-  - Golang:
-      - ./golang/index.md
-      - 垃圾回收GC: golang/gc.md
-      - GMP调度模型: golang/gmp.md
-      - 代码题目: golang/coding.md
-  - Python:
-      - 基础: python/index.md
-      - 面试: python/interview.md
+  - 编程语言:
+      - Golang:
+          - ./golang/index.md
+          - 垃圾回收GC: golang/gc.md
+          - GMP调度模型: golang/gmp.md
+          - 代码题目: golang/coding.md
+      - Python:
+          - 基础: python/index.md
+          - 面试: python/interview.md
   - 消息队列:
       - Kafka:
           - Kafka基础: kafka/index.md
@@ -175,6 +176,8 @@ nav:
           - 59. 螺旋矩阵II: leetcode/59.md
           - 253. 会议室II: leetcode/253.md
           - 56. 合并区间: leetcode/56.md
+      - 哈希表:
+          - 3. 无重复字符的最长子串: leetcode/3.md
       - 链表:
           - 2. 两数相加: leetcode/2.md
           - 203. 移除链表元素: leetcode/203.md
@@ -190,6 +193,10 @@ nav:
           - 23. 合并 K 个升序链表: leetcode/23.md
           - 146. LRU 缓存: leetcode/146.md
           - 148. 排序链表: leetcode/148.md
+      - 双指针:
+          - 15. 三数之和: leetcode/15.md
+      - 图论(DFS/BFS):
+          - 200. 岛屿数量: leetcode/200.md
       - 二叉树:
           - 基础: leetcode/binary_tree.md
           - 226. 翻转二叉树: leetcode/226.md
@@ -217,6 +224,8 @@ nav:
           - 55. 跳跃游戏: leetcode/55.md
           - 45. 跳跃游戏 II: leetcode/45.md
           - 763. 划分字母区间: leetcode/763.md
+  - 设计模式:
+      - design_mode/index.md
   - LLM:
       - llm/index.md
       - Paper论文: llm/paper.md
