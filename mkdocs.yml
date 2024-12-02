@@ -176,6 +176,7 @@ nav:
           - 59. 螺旋矩阵II: leetcode/59.md
           - 253. 会议室II: leetcode/253.md
           - 56. 合并区间: leetcode/56.md
+          - 33. 搜索旋转排序数组: leetcode/33.md
           - 215. 数组中的第K个最大元素: leetcode/215.md
       - 哈希表:
           - 3. 无重复字符的最长子串: leetcode/3.md
@@ -215,6 +216,7 @@ nav:
           - 437. 路径总和 III: leetcode/437.md
           - 236. 二叉树的最近公共祖先: leetcode/236.md
           - 124. 二叉树中的最大路径和: leetcode/124.md
+          - 103. 二叉树的锯齿形层序遍历: leetcode/103.md
       - 回溯:
           - 31. 下一个排列: leetcode/31.md
           - 51. N 皇后: leetcode/51.md
@@ -226,6 +228,8 @@ nav:
           - 55. 跳跃游戏: leetcode/55.md
           - 45. 跳跃游戏 II: leetcode/45.md
           - 763. 划分字母区间: leetcode/763.md
+          - 121. 买卖股票的最佳时机: leetcode/121.md
+          - 122. 买卖股票的最佳时机 II: leetcode/122.md
       - 单调栈:
           - 42. 接雨水: leetcode/42.md
   - 设计模式:

@@ -8,13 +8,13 @@ hide:
   - footer
 ---
 
-## MySQL 三大日志
+## 1. MySQL 三大日志
 
 - **undo log（回滚日志）**：是 Innodb 存储引擎层生成的日志，实现了事务中的 ==**原子性**==，主要用于 ==**事务回滚和 MVCC**==。
 - **redo log（重做日志）**：是 Innodb 存储引擎层生成的日志，实现了事务中的 ==**持久性**==，主要用于 ==**掉电等故障恢复**==；
 - **binlog （归档日志）**：是 Server 层生成的日志，主要用于 ==**数据备份和主从复制**==；
 
-## undo log
+## 2. undo log
 
 每当 InnoDB 引擎对一条记录进行操作（修改、删除、新增）时，要把回滚时需要的信息都记录到 undo log 里。
 
@@ -39,7 +39,7 @@ hide:
 
     buffer pool 中有 undo 页，对 undo 页的修改也都会记录到 redo log。redo log 会每秒刷盘，提交事务时也会刷盘，数据页和 undo 页都是靠这个机制保证持久化的。
 
-## Buffer Pool
+## 3. Buffer Pool
 
 Innodb 存储引擎设计了一个缓冲池（Buffer Pool），来提高数据库的读写性能。
 
@@ -58,7 +58,7 @@ Buffer Pool 除了缓存「索引页」和「数据页」，还包括了 Undo �
 
     **WAL 技术指的是， MySQL 的写操作并不是立刻写到磁盘上，而是先写日志，然后在合适的时间再写到磁盘上。**
 
-## redo log
+## 4. redo log
 
 !!!note "什么是 redo log？"
 
@@ -90,7 +90,7 @@ Buffer Pool 除了缓存「索引页」和「数据页」，还包括了 Undo �
 
 ### redo log 什么时候刷盘？
 
-## binlog
+## 5. binlog
 
 MySQL 在完成一条更新操作后，Server 层还会生成一条 binlog，等之后事务提交的时候，会将该事物执行过程中产生的所有 binlog 统一写 入 binlog 文件。
 
@@ -98,22 +98,22 @@ MySQL 在完成一条更新操作后，Server 层还会生成一条 binlog，等
 
 ### redo log 和 bin log 有什么区别？
 
-1、适用对象不同：
+==1、适用对象不同：==
 
 - binlog 是 MySQL 的 Server 层实现的日志，所有存储引擎都可以使用；
 - redo log 是 Innodb 存储引擎实现的日志；
 
-2、文件格式不同：
+==2、文件格式不同：==
 
-- binlog 有 3 种格式类型，分别是 STATEMENT（默认格式）、ROW、 MIXED.
+- binlog 有 3 种格式类型，分别是 **STATEMENT（默认格式）、ROW、 MIXED**.
 - redo log 是物理日志，记录的是在某个数据页做了什么修改，比如对 XXX 表空间中的 YYY 数据页 ZZZ 偏移量的地方做了 AAA 更新；
 
-3、写入方式不同：
+==3、写入方式不同：==
 
 - binlog 是追加写，写满一个文件，就创建一个新的文件继续写，不会覆盖以前的日志，保存的是全量的日志。
 - redo log 是循环写，日志空间大小是固定，全部写满就从头开始，保存未被刷入磁盘的脏页日志。
 
-4、用途不同：
+==4、用途不同：==
 
 - binlog 用于备份恢复、主从复制；
 - redo log 用于掉电等故障恢复。
@@ -122,7 +122,7 @@ MySQL 在完成一条更新操作后，Server 层还会生成一条 binlog，等
 
 事务执行过程中，先把日志写到 binlog cache（Server 层的 cache），**事务提交的时候，再把 binlog cache 写到 binlog 文件中**。
 
-## 为什么需要两阶段提交？
+## 6. 为什么需要两阶段提交？
 
 事务提交后，redo log 和 binlog 都要持久化到磁盘，但是这两个是独立的逻辑，可能出现半成功的状态，这样就造成两份日志之间的逻辑不一致。
 
@@ -138,8 +138,8 @@ MySQL 在完成一条更新操作后，Server 层还会生成一条 binlog，等
 
 事务的提交过程有两个阶段，就是将 redo log 的写入拆成了两个步骤：prepare 和 commit，中间再穿插写入 binlog，具体如下：
 
-- ==prepare 阶段==：将 XID（内部 XA 事务的 ID） 写入到 redo log，同时将 redo log 对应的事务状态设置为 prepare，然后将 redo log 持久化到磁盘（innodb_flush_log_at_trx_commit = 1 的作用）；
-- ==commit 阶段==：把 XID 写入到 binlog，然后将 binlog 持久化到磁盘（sync_binlog = 1 的作用），接着调用引擎的提交事务接口，将 redo log 状态设置为 commit，此时该状态并不需要持久化到磁盘，只需要 write 到文件系统的 page cache 中就够了，因为只要 binlog 写磁盘成功，就算 redo log 的状态还是 prepare 也没有关系，一样会被认为事务已经执行成功；
+- **prepare 阶段**：将 XID（内部 XA 事务的 ID） 写入到 redo log，同时将 redo log 对应的事务状态设置为 prepare，然后将 redo log 持久化到磁盘（`innodb_flush_log_at_trx_commit = 1` 的作用）；
+- **commit 阶段**：把 XID 写入到 binlog，然后将 binlog 持久化到磁盘（`sync_binlog = 1` 的作用），接着调用引擎的提交事务接口，将 redo log 状态设置为 commit，此时该状态并不需要持久化到磁盘，只需要 write 到文件系统的 page cache 中就够了，因为只要 binlog 写磁盘成功，就算 redo log 的状态还是 prepare 也没有关系，一样会被认为事务已经执行成功；
 
 {==
 
@@ -159,10 +159,10 @@ MySQL 引入了** binlog 组提交（group commit）机制**，当有多个事�
 
 ==}
 
-## MySQL 磁盘 I/O 很高，优化方法
+## 7. MySQL 磁盘 I/O 很高，优化方法
 
 - 设置组提交的两个参数： `binlog_group_commit_sync_delay` 和 `binlog_group_commit_sync_no_delay_count` 参数，延迟 binlog 刷盘的时机，从而减少 binlog 的刷盘次数。
-- 将 sync_binlog 设置为大于 1 的值（比较常见是 100~1000），表示每次提交事务都 write，但累积 N 个事务后才 fsync，相当于延迟了 binlog 刷盘的时机。但是这样做的风险是，主机掉电时会丢 N 个事务的 binlog 日志。
+- 将 **sync_binlog** 设置为大于 1 的值（比较常见是 100~1000），表示每次提交事务都 write，但累积 N 个事务后才 fsync，相当于延迟了 binlog 刷盘的时机。但是这样做的风险是，主机掉电时会丢 N 个事务的 binlog 日志。
 - 将 `innodb_flush_log_at_trx_commit` 设置为 2。表示每次事务提交时，都只是缓存在 redo log buffer 里的 redo log 写到 redo log 文件。但是这样做的风险是，主机掉电的时候会丢数据。
 
 ---
