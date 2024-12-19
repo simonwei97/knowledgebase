@@ -9,4 +9,4 @@
 ## Documentation Websites
 - [https://github.com/mintlify/starter](https://github.com/mintlify/starter){:target="_blank"}
 - [https://github.com/withastro/starlight](https://github.com/withastro/starlight){:target="_blank"}
-- [[https://github.com/withastro/starlight](https://github.com/executablebooks/sphinx-book-theme)]([https://github.com/withastro/starlight](https://github.com/executablebooks/sphinx-book-theme)){:target="_blank"}
+- [https://github.com/executablebooks/sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme){:target="_blank"}
