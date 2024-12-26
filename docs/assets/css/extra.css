@@ -3,6 +3,10 @@
   display: none !important;
 }
 
+.md-grid {
+    max-width: 75%; /* or 100%, if you want to stretch to full-width */
+}
+
 :root > * {
     --md-default-fg-color: #1d1d20;
     --md-default-bg-color: #ffffff;
