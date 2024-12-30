@@ -8,13 +8,13 @@ hide:
   - footer
 ---
 
-## 进程、线程、协程有什么区别？（必问）
+## 1. 进程、线程、协程有什么区别？（必问）
 
 - **进程**：是应用程序的启动实例，每个进程都有独立的内存空间，不同的进程通过进程间的通信方式来通信。
 - **线程**：从属于进程，每个进程至少包含一个线程，**线程是 CPU 调度的基本单位**，多个线程之间可以共享进程的资源并通过共享内存等线程间的通信方式来通信。
 - **协程**：为轻量级线程，与线程相比，协程不受操作系统的调度，协程的调度器由用户应用程序提供，协程调度器按照调度策略把协程调度到线程中运行
 
-## Go 面向对象是如何实现的？
+## 2. Go 面向对象是如何实现的？
 
 Go 实现面向对象的两个关键是 `struct` 和 `interface`。
 
@@ -22,24 +22,24 @@ Go 实现面向对象的两个关键是 `struct` 和 `interface`。
 - **继承**：继承是编译时特征，**在 struct 内加入所需要继承的类即可**：
 - **多态**：多态是运行时特征，**Go 多态通过 interface 来实现**。类型和接口是松耦合的，某个类型的实例可以赋给它所实现的任意接口类型的变量。
 
-## make 和 new 的区别？
+## 3. make 和 new 的区别？
 
 - new 只用于分配内存，返回一个指向地址的指针。它为每个新类型分配一片内存，初始化为 0 且**返回类型 \*T 的内存地址**，它相当于 `&T{}`。
 - make 只可用于 slice，map，channel 的初始化，**返回的是引用**。
 
-## defer 的执行顺序
+## 4. defer 的执行顺序
 
 **defer 执行顺序和调用顺序相反**，类似于栈后进先出(LIFO)。
 
 panic 错误并不能终止 defer 的执行。
 
-## 空 struct{} 的用途
+## 5. 空 struct{} 的用途
 
 1. 用 map 模拟一个 set，那么就要把值置为 struct{}，struct{}本身不占任何空间，可以避免任何多余的内存分配。
 2. 有时候给通道发送一个空结构体，channel<-struct{}{}，也是节省了空间。
 3. 仅有方法的结构体
 
-## init() 函数是什么时候执行的？
+## 6. init() 函数是什么时候执行的？
 
 在 main 函数之前执行。init()函数是 go 初始化的一部分，由 runtime 初始化每个导入的包，初始化不是按照从上到下的导入顺序，而是**按照解析的依赖关系，没有依赖的包最先初始化。**
 
@@ -47,7 +47,7 @@ panic 错误并不能终止 defer 的执行。
 
 **执行顺序：import –> const –> var –>init()–>main()**
 
-## Go 的值类型和引用类型
+## 7. Go 的值类型和引用类型
 
 **值类型**：int、float、bool、string、array、sturct 等
 
@@ -61,14 +61,14 @@ panic 错误并不能终止 defer 的执行。
     - map/channel 本身就是指针，是引用类型，所以直接传 map 和 channel 本身就可以。
     - slice 的赋值操作其实是针对 slice 结构体内部的指针进行操作，也是指针，可以直接传 slice 本身。
 
-## Go 语言到底是值传递，还是引用传递？
+## 8. Go 语言到底是值传递，还是引用传递？
 
 Go 里面没有引用传递，**Go 语言是值传递**。
 
 > - 值传递：指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到实际参数。
 > - 引用传递：指在调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到实际参数。
 
-## unsafe.Pointer
+## 9. unsafe.Pointer
 
 1. 任何类型的指针都可以被转化为 `unsafe.Pointer`；
 2. `unsafe.Pointer `可以被转化为任何类型的指针；
@@ -90,7 +90,7 @@ Go 里面没有引用传递，**Go 语言是值传递**。
 
 ==}
 
-## 什么是内存逃逸？
+## 10. 什么是内存逃逸？
 
 Go 语言中，**堆内存是通过垃圾回收机制自动管理的**，无需开发者指定。那么，Go 编译器怎么知道某个变量需要分配在栈上，还是堆上呢？**编译器决定内存分配位置的方式，就称之为逃逸分析(escape analysis)。逃逸分析由编译器完成，作用于编译阶段。** 不逃逸的对象放栈上，可能逃逸的放堆上。
 
@@ -117,15 +117,15 @@ go build -gcflags '-m -l' main.go
 - **闭包引用对象逃逸**：闭包函数如果访问了外部变量，函数销毁，但变量不会回收，会逃逸到堆上。
 - **变量较大（栈空间不足）**和 **变量大小不确定（如 slice 长度或容量不定）**也会引起逃逸
 
-## Go 解析 Tag 是怎么实现的？
+## 11. Go 解析 Tag 是怎么实现的？
 
 在 Go 语言中，标签（Tag）是附加到结构体字段的元信息，它是以字符串的形式存储的。这些标签**可以通过反射（reflection）机制来获取**，并可以被用于各种目的。
 
 ```go
 type User struct {
-  Name    string `json:"name"`
-  Email   string `json:"email"`
-  Age     int    `json:"age"`
+    Name    string `json:"name"`
+    Email   string `json:"email"`
+    Age     int    `json:"age"`
 }
 ```
 
@@ -136,7 +136,7 @@ type User struct {
 3. 数据库 ORM 映射
 4. HTTP 路由和处理
 
-## Go 内存分配
+## 12. Go 内存分配
 
 Golang 内存分配管理策略是按照不同大小的对象和不同的内存层级来分配管理内存。通过这种多层级分配策略，形成无锁化或者降低锁的粒度，以及尽量减少内存碎片，来提高内存分配效率。
 
@@ -155,7 +155,7 @@ Golang 中内存管理的层级从最下到最上可以分为：`mspan -> mcache
 5. 如果 **mheap** 中没有可用 **span**，则向操作系统申请一系列新的页（最小 1MB）
 6. **对于大于 32K 的大对象**直接从 **mheap** 分配
 
-## Go Context 简介
+## 13. Go Context 简介
 
 > 参考：[上下文 - context](https://go.cyub.vip/concurrency/context/)
 
@@ -172,7 +172,9 @@ Context 接口一共包含四个方法：
 
 Context 一共有 4 个类型实现了 Context 接口, 分别是 `emptyCtx, cancelCtx, timerCtx, valueCtx`。每个类型都关联一个创建方法。
 
-![](../assets//img/context_interface.png)
+<center>
+![](../assets//img/context_interface.png){width=50%}
+</center>
 
 ### Context 的使用场景
 
@@ -206,7 +208,7 @@ for {
     - 不要传递一个 nil Context 给一个函数，即使该函数能够接受它。如果你不确定使用哪一个 Context，那你就传递 context.TODO
     - **context 是并发安全的**，相同的 Context 能够传递给运行在不同 goroutine 的函数
 
-## Go 捕获子协程 panic
+## 14. Go 捕获子协程 panic
 
 当一个子协程中发生 panic 时，它会向上传播直到被主协程或它的父协程捕获或导致整个程序崩溃。使用 **defer 关键字和 recover() 函数可以防止 panic** 向上传播并使程序崩溃。
 
@@ -229,7 +231,7 @@ func main() {
 
 ```
 
-## 进程被 kill，如何保证所有 goroutine 顺利退出？
+## 15. 进程被 kill，如何保证所有 goroutine 顺利退出？
 
 使用 Go 语言提供的 `sync.WaitGroup` 类型来实现这个功能
 
@@ -250,7 +252,7 @@ go func() {
 wg.Wait()
 ```
 
-## Go Interface 介绍
+## 16. Go Interface 介绍
 
 在 Golang 中，interface 是一组 method 的集合，是 duck-type programming 的一种体现，鸭子类型编程。
 
@@ -276,7 +278,7 @@ wg.Wait()
     - 两个 interface 均等于 nil（此时 V 和 T 都处于 unset 状态）
     - 类型 T 相同，且对应的值 V 相等。
 
-## 2 个 nil 可能不相等吗？
+## 17. 2 个 nil 可能不相等吗？
 
 可能不等。interface 在运行时绑定值，只有值为 nil 接口值才为 nil，但是与指针的 nil 不相等。举个例子：
 
@@ -290,12 +292,12 @@ if(p == i){
 
 两者并不相同。总结：**两个 nil 只有在类型相同时才相等**。
 
-## 如何灵活控制 goroutine 并发数量？
+## 18. 如何灵活控制 goroutine 并发数量？
 
 - 带缓冲的 channel + sync 库： `sync.WaitGroup`。
 - 引用第三方库：如 [panjf2000/ants](https://github.com/panjf2000/ants)
 
-## Go select 优先级执行
+## 19. Go select 优先级执行
 
 > 参考：[Go 语言在 select 语句中实现优先级](https://www.liwenzhou.com/posts/Go/priority-in-select/)
 
@@ -335,7 +337,7 @@ func worker(ch1, ch2 <-chan int, stopCh chan struct{}) {
 }
 ```
 
-## go slice 是怎么扩容的？
+## 20. go slice 是怎么扩容的？
 
 ### Go <= 1.17
 
@@ -361,5 +363,9 @@ old\_cap * 2                              & if \ old\_cap < threshold \\
 old\_cap + \frac{old\_cap+3*threshold}{4} & if \ old\_cap > threshold \\
 \end{cases}
 $$
+
+---
+
+## 参考
 
 - [Go 语言 unsafe.Pointer 浅析](https://juejin.cn/post/7083853142403579911)

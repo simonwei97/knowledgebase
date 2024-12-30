@@ -10,12 +10,12 @@ readme = "README.md"
 python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
-mkdocs = "^1.6.0"
-mkdocs-jupyter = "^0.24.7"
-mkdocs-material = "^9.5.26"
+mkdocs = "^1.6.1"
+mkdocs-jupyter = "^0.25.1"
+mkdocs-material = "^9.5.49"
 mkdocs-redirects = "^1.2.1"
 mkdocs-include-dir-to-nav = "^1.2.0"
-mkdocstrings = "^0.25.1"
+mkdocstrings = "^0.27.0"
 mkdocs-glightbox = "^0.4.0"
 
 [build-system]

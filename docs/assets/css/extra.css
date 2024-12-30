@@ -4,7 +4,8 @@
 }
 
 .md-grid {
-    max-width: 75%; /* or 100%, if you want to stretch to full-width */
+    max-width: 75rem; /* or 100%, if you want to stretch to full-width */
+    /* max-width: initial; */  /* https://github.com/squidfunk/mkdocs-material/discussions/6404 */
 }
 
 :root > * {
