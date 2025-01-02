@@ -14,7 +14,9 @@ hide:
 
 所有的数据修改只在主服务器上进行，然后将最新的数据同步给从服务器，这样就使得主从服务器的数据是一致的。
 
-![](../assets/img/redis/master_slave_copy.webp)
+<center>
+![](../assets/img/redis/master_slave_copy.webp){width=50%}
+</center>
 
 主从复制共有三种模式：**全量复制、基于长连接的命令传播、增量复制**。
 

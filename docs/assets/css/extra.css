@@ -91,12 +91,12 @@
 /* Markdown Header */
 /* https://github.com/squidfunk/mkdocs-material/blob/dcab57dd1cced4b77875c1aa1b53467c62709d31/src/assets/stylesheets/main/_typeset.scss */
 .md-typeset h1 {
-    font-weight: 400;
+    font-weight: 700;
     color: var(--md-default-fg-color);
 }
   
 .md-typeset h2 {
-    font-weight: 400;
+    font-weight: 600;
 }
   
 .md-typeset h3 {

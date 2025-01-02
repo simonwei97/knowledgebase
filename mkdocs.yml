@@ -158,6 +158,7 @@ nav:
       - 过期策略: redis/expire.md
       - 持久化: redis/durability.md
       - 高可用: redis/ha.md
+      - 缓存: redis/cache.md
   - 云原生:
       - Docker:
           - 基础: cloud_native/docker/base.md
