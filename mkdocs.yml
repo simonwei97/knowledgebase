@@ -19,16 +19,15 @@ theme:
     - content.code.copy # Code blocks
     - content.code.select # Code blocks
     - content.code.annotate # Code blocks
-    # - navigation.sections
+    - navigation.sections
     - navigation.instant
     - navigation.tabs
     - navigation.indexes
     - navigation.top
-    - navigation.footer
+    # - navigation.footer
     - content.tooltips
     - content.footnote.tooltips # Footnotes
     - search.suggest
-    - search.highlight
     - search.highlight
     - search.share
     - search.suggest
@@ -238,31 +237,32 @@ nav:
       - design_mode/index.md
   - LLM:
       - llm/index.md
-      - Transformer模型: llm/transformer.md
-      - 注意力: llm/attention.md
+      - 常见问题: llm/qa.md
+      - Transformer 模型: llm/transformer.md
+      - Attention 注意力: llm/attention.md
       - 微调:
           - SFT: llm/fine_tuning/sft.md
-          - LoRa: llm/fine_tuning/lora.md
+          - LoRA: llm/fine_tuning/lora.md
           - 开源架构: llm/fine_tuning/framework.md
       - 推理框架:
           - 简介: llm/inference/index.md
+      - MLSys: llm/mlsys.md
       - RAG: llm/rag.md
       - MCP:
-          - 概要: llm/mcp/index.md
+          - llm/mcp/index.md
+          - 示例: llm/mcp/example.md
       - 论文: llm/paper.md
-
-    #   - Paper论文: llm/paper.md
-  - Mac 配置:
-      - 基础配置: mac/index.md
-      - 机器学习: mac/ml.md
-      - 镜像源配置: mac/mirror.md
-      - 宁芝 Niz键盘: mac/niz.md
-      - VS Code配置: mac/vscode.md
-      - iTerm2配置: mac/iterm2.md
-      - 编程环境配置: mac/program_env.md
   - Misc:
       - misc/index.md
       - 正则表达式: misc/regex.md
+      - Mac 配置:
+          - 基础配置: misc/mac/index.md
+          - 机器学习: misc/mac/ml.md
+          - 镜像源配置: misc/mac/mirror.md
+          - 宁芝 Niz键盘: misc/mac/niz.md
+          - VS Code配置: misc/mac/vscode.md
+          - iTerm2配置: misc/mac/iterm2.md
+          - 编程环境配置: misc/mac/program_env.md
 
 copyright: Copyright &copy; 2023 - 2024 Simonwei97.
 

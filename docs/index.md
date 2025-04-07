@@ -80,6 +80,6 @@ hide:
 
     MacBook电脑配置。
 
-    [:octicons-arrow-right-24: 开始阅读](mac/index.md)
+    [:octicons-arrow-right-24: 开始阅读](misc/mac/index.md)
 
 </div>
