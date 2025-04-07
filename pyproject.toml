@@ -1,24 +1,15 @@
-[tool.poetry]
+[project]
 name = "knowledgebase"
 version = "0.1.0"
-description = ""
-authors = ["simonwei97"]
-license = "MIT"
+description = "Add your description here"
 readme = "README.md"
-package-mode = false
-
-[tool.poetry.dependencies]
-python = "^3.12"
-
-[tool.poetry.group.dev.dependencies]
-mkdocs = "^1.6.1"
-mkdocs-jupyter = "^0.25.1"
-mkdocs-material = "^9.5.49"
-mkdocs-redirects = "^1.2.1"
-mkdocs-include-dir-to-nav = "^1.2.0"
-mkdocstrings = "^0.29.0"
-mkdocs-glightbox = "^0.4.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.10"
+dependencies = [
+    "mkdocs>=1.6.1",
+    "mkdocs-glightbox>=0.4.0",
+    "mkdocs-include-dir-to-nav>=1.2.0",
+    "mkdocs-jupyter>=0.25.1",
+    "mkdocs-material>=9.6.11",
+    "mkdocs-redirects>=1.2.2",
+    "mkdocstrings>=0.29.1",
+]

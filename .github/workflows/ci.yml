@@ -1,17 +1,27 @@
 name: ci
+
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.12
-      - run: pip install poetry
-      - run: poetry install
+          python-version: "3.12"
+
+      - uses: astral-sh/setup-uv@v1
+        with:
+          version: "latest"
+
+      - name: Install the project
+        run: uv sync -p 3.12
+
       - name: Publish docs
-        run: poetry run mkdocs gh-deploy --force
+        run: uv run mkdocs gh-deploy --force

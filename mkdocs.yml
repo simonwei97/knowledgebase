@@ -238,7 +238,20 @@ nav:
       - design_mode/index.md
   - LLM:
       - llm/index.md
-      - Paper论文: llm/paper.md
+      - Transformer模型: llm/transformer.md
+      - 注意力: llm/attention.md
+      - 微调:
+          - SFT: llm/fine_tuning/sft.md
+          - LoRa: llm/fine_tuning/lora.md
+          - 开源架构: llm/fine_tuning/framework.md
+      - 推理框架:
+          - 简介: llm/inference/index.md
+      - RAG: llm/rag.md
+      - MCP:
+          - 概要: llm/mcp/index.md
+      - 论文: llm/paper.md
+
+    #   - Paper论文: llm/paper.md
   - Mac 配置:
       - 基础配置: mac/index.md
       - 机器学习: mac/ml.md
