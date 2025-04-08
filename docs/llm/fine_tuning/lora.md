@@ -8,4 +8,5 @@ hide:
   - footer
 ---
 
-LoRA: Low-Rank Adaptation of Large Language Models
+- Paper: [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
+- GitHub: [https://github.com/microsoft/LoRA](https://github.com/microsoft/LoRA)

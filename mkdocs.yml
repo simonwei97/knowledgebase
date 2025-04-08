@@ -102,6 +102,11 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - tables # Tables
   - footnotes # Footnotes
   - toc:
@@ -115,6 +120,10 @@ markdown_extensions:
   - pymdownx.superfences # Admonitions / Annotations / Content tabs / Code blocks
   - pymdownx.tabbed: # Content tabs
       alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - def_list # List
   - pymdownx.tasklist: # List
       custom_checkbox: true
@@ -233,17 +242,16 @@ nav:
           - 122. 买卖股票的最佳时机 II: leetcode/122.md
       - 单调栈:
           - 42. 接雨水: leetcode/42.md
-  - 设计模式:
-      - design_mode/index.md
-  - LLM:
+  - 大模型:
       - llm/index.md
       - 常见问题: llm/qa.md
       - Transformer 模型: llm/transformer.md
       - Attention 注意力: llm/attention.md
       - 微调:
+          - 概要: llm/fine_tuning/index.md
           - SFT: llm/fine_tuning/sft.md
           - LoRA: llm/fine_tuning/lora.md
-          - 开源架构: llm/fine_tuning/framework.md
+          - 开源框架: llm/fine_tuning/framework.md
       - 推理框架:
           - 简介: llm/inference/index.md
       - MLSys: llm/mlsys.md
@@ -252,6 +260,8 @@ nav:
           - llm/mcp/index.md
           - 示例: llm/mcp/example.md
       - 论文: llm/paper.md
+  - 设计模式:
+      - design_mode/index.md
   - Misc:
       - misc/index.md
       - 正则表达式: misc/regex.md

@@ -29,7 +29,9 @@ OSI 七层模型：**物理层、数据链路层、网络层、传输层、会�
 - **表现层（Presentation Layer）**：数据格式化，加密、解密。
 - **应用层（Application Layer）**：为应用程序提供网络服务。
 
+<center>
 ![网络模型](../assets/img/network_mode.png){width=50%}
+</center>
 
 ---
 - [深入理解 TCP/IP 模型](https://zhuanlan.zhihu.com/p/33797520)
