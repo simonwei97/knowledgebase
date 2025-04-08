@@ -1,0 +1,158 @@
+.md-container .jp-Cell-outputWrapper .jp-OutputPrompt.jp-OutputArea-prompt,
+.md-container .jp-Cell-inputWrapper .jp-InputPrompt.jp-InputArea-prompt {
+  display: none !important;
+}
+
+.md-grid {
+    max-width: 65rem; /* or 100%, if you want to stretch to full-width */
+    /* max-width: initial; */  /* https://github.com/squidfunk/mkdocs-material/discussions/6404 */
+}
+
+:root > * {
+    --md-default-fg-color: #1d1d20;
+    --md-default-bg-color: #ffffff;
+
+    --md-body-bg-color: #22272e;
+    --md-header-bg-color: rgba(255, 255, 255, 0.6);
+
+    --md-accent-fg-color: #999;
+
+}
+
+[data-md-color-scheme="slate"] {
+    --md-default-fg-color: #adbac7;
+    --md-default-bg-color: #22272e;
+
+    --md-body-bg-color: #22272e;
+    --md-header-bg-color: rgba(34, 39, 46, 0.8);
+
+    --md-accent-fg-color: #aaa;
+}
+
+[data-md-color-primary="black"] .md-header {
+    background-color: var(--md-header-bg-color);
+}
+
+.md-header {
+    box-shadow: none;
+    transition: none;
+    backdrop-filter: saturate(180%) blur(20px); /* Gaussian blur */
+    -webkit-backdrop-filter: saturate(180%) blur(20px); /* Safari */
+    background-color: var(--md-header-bg-color);
+}
+
+/* https://github.com/squidfunk/mkdocs-material/issues/4832#issuecomment-1374891676 */
+.md-nav__link[for] {
+    color: var(--md-default-fg-color) !important;
+}
+  
+/* Figure class */
+.animation-figure {
+    border-radius: 0.3rem;
+    display: block;
+    margin: 0 auto;
+    box-shadow: var(--md-shadow-z2);
+}
+  
+/* Cover image class */
+.cover-image {
+    width: 28rem;
+    height: auto;
+    border-radius: 0.3rem;
+    display: block;
+    margin: 0 auto;
+    box-shadow: var(--md-shadow-z2);
+}
+  
+/* Center Markdown Tables (requires md_in_html extension) */
+.center-table {
+    text-align: center;
+}
+  
+/* Reset alignment for table cells */
+.md-typeset .center-table :is(td, th):not([align]) {
+    text-align: initial;
+}
+  
+/* Font size */
+.md-typeset {
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.md-typeset p, ol, li {
+    font-size: 0.65rem;
+}
+  
+.md-typeset pre {
+    font-size: 0.95em;
+}
+
+/* Markdown Header */
+/* https://github.com/squidfunk/mkdocs-material/blob/dcab57dd1cced4b77875c1aa1b53467c62709d31/src/assets/stylesheets/main/_typeset.scss */
+.md-typeset h1 {
+    font-weight: 700;
+    color: var(--md-default-fg-color);
+}
+  
+.md-typeset h2 {
+    font-weight: 600;
+}
+  
+.md-typeset h3 {
+    font-weight: 500;
+}
+  
+.md-typeset h5 {
+    text-transform: none;
+}
+  
+.md-typeset a:hover {
+    color: var(--md-typeset-a-color);
+    text-decoration: underline;
+}
+  
+.md-typeset code {
+    border-radius: 0.2rem;
+    font-size: 0.55rem;
+}
+
+.highlight span.filename {
+    /* font-weight: normal; */
+    font-weight: bold;
+}
+  
+/* font-family setting for Win10 */
+body {
+    --md-text-font-family: -apple-system, BlinkMacSystemFont,
+      var(--md-text-font, _), Helvetica, Arial, sans-serif;
+    --md-code-font-family: var(--md-code-font, _), SFMono-Regular, Consolas, Menlo,
+      -apple-system, BlinkMacSystemFont, var(--md-text-font, _), monospace;
+}
+  
+/* max height of code block */
+/* https://github.com/squidfunk/mkdocs-material/issues/3444 */
+.md-typeset pre > code {
+    /* max-height: 25rem; */
+    max-height: 50rem;
+}
+
+/* Make the picture not glare in dark theme */
+[data-md-color-scheme="slate"] .md-typeset img,
+[data-md-color-scheme="slate"] .md-typeset svg,
+[data-md-color-scheme="slate"] .md-typeset video {
+  filter: brightness(0.85) invert(0.05);
+}
+
+/* Icon color */
+.youtube {
+    color: #EE0F0F;
+}
+
+.red-color {
+    color: #EE0F0F;
+}
+
+.llm {
+    --md-icon-size: 2.5em;
+}
