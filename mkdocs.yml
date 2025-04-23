@@ -227,10 +227,14 @@ nav:
           - 124. 二叉树中的最大路径和: leetcode/124.md
           - 103. 二叉树的锯齿形层序遍历: leetcode/103.md
           - 662. 二叉树最大宽度: leetcode/662.md
+          - 653. 两数之和 IV - 输入二叉搜索树: leetcode/653.md
       - 回溯:
+          - 17. 电话号码的字母组合: leetcode/17.md
           - 31. 下一个排列: leetcode/31.md
           - 51. N 皇后: leetcode/51.md
           - 46. 全排列: leetcode/46.md
+          - 78. 子集: leetcode/78.md
+          - 131. 分割回文串: leetcode/131.md
       - 动态规划:
           - 509. 斐波那契数: leetcode/509.md
           - 198. 打家劫舍: leetcode/198.md
@@ -274,7 +278,7 @@ nav:
           - iTerm2配置: misc/mac/iterm2.md
           - 编程环境配置: misc/mac/program_env.md
 
-copyright: Copyright &copy; 2023 - 2024 Simonwei97.
+copyright: Copyright &copy; 2023 - 2025 Simonwei97.
 
 extra:
   social:

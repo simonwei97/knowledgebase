@@ -10,10 +10,6 @@ hide:
 
 ## 快排
 
-- [X] 时间复杂度为 $O(n \log n)$。
-    - 在平均情况下，哨兵划分的递归层数为 $log n$，每层中的总循环数为 $n$，总体使用 $O(n \log n)$ 时间。
-- [X] 空间复杂度为 $O(n)$
-
 ```go title="Go"
 /* 哨兵划分 */
 func partition(nums []int, left, right int) int {
@@ -76,5 +72,12 @@ def quick_sort(self, nums: list[int], left: int, right: int):
     self.quick_sort(nums, pivot + 1, right)
 
 ```
+
+### 复杂度
+
+- [X] 时间复杂度为 $O(n \log n)$。
+    - 在平均情况下，哨兵划分的递归层数为 $log n$，每层中的总循环数为 $n$，总体使用 $O(n \log n)$ 时间。
+- [X] 空间复杂度为 $O(n)$
+
 
 - [https://www.hello-algo.com/chapter_sorting/quick_sort/](https://www.hello-algo.com/chapter_sorting/quick_sort/)
