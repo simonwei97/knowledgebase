@@ -205,6 +205,7 @@ nav:
           - 146. LRU 缓存: leetcode/146.md
           - 148. 排序链表: leetcode/148.md
       - 双指针:
+          - 5. 最长回文子串: leetcode/5.md
           - 15. 三数之和: leetcode/15.md
           - 42. 接雨水: leetcode/42.md
       - 图论(DFS/BFS):
