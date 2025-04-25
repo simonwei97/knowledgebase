@@ -104,10 +104,40 @@ cargo --version
 之后如果需要升级，可以使用 `rustup` CLI命令。
 
 ```bash
+# 升级
 rustup update
 
 # 如果选择 stable 版本
 rustup update stable
 ```
 
-> 参考: https://www.rust-lang.org/tools/install
+> 参考: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install){target="_blank"}
+
+## 4. uv 工具
+
+uv 工具介绍: https://docs.astral.sh/uv/
+
+```bash
+# 下载安装
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+## 5. Java
+
+- JDK下载: [https://jdk.java.net/archive/](https://jdk.java.net/archive/){target="_blank"}
+- Maven包(包括 `mvnd` )下载: [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi){target="_blank"}
+- Maven加速: 
+  - 阿里云: [https://developer.aliyun.com/mvn/guide](https://developer.aliyun.com/mvn/guide){target="_blank"}
+
+```bash
+# maven
+export MAVEN_HOME=/usr/local/apache-maven-3.x.x/
+export PATH=${PATH}:${MAVEN_HOME}/bin
+
+# java
+JAVA_HOME=/usr/local/java/jdk-x.x.x        
+JRE_HOME=/usr/local/java/jdk-x.x.x/jre     
+CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+export JAVA_HOME JRE_HOME CLASS_PATH PATH
+```
