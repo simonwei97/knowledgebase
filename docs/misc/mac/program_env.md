@@ -1,47 +1,23 @@
-## 1. Conda 开发环境配置
+## 1. Python (UV)
 
-**Anaconda**
-: - 包含了更多的科学计算的工具包，安装包大，安装过程也比较繁琐。
-  - [https://www.anaconda.com/download/success](https://www.anaconda.com/download/success)
-
-**Miniconda**: 
-:  - 更加轻量化
-  - [https://docs.anaconda.com/miniconda/](https://docs.anaconda.com/miniconda/)
-
-
-对于 M系列芯片的 Mac 电脑，运行如下命令即可。
+`uv` 工具介绍: [https://docs.astral.sh/uv/](https://docs.astral.sh/uv/)
 
 ```bash
-mkdir -p ~/miniconda3
-curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-```
+# 下载安装
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-安装好后，初始化对应的 Shell 环境。
+# 初始化
+cd workspace
+# 初始化
+#  -p: 指定 python 版本
+uv init -p 3.xx
 
-```bash
-~/miniconda3/bin/conda init bash
-~/miniconda3/bin/conda init zsh
-```
+# 创建本项目的虚拟环境 virtual environment,
+#  -p: 指定 python 版本
+uv venv -p 3.xx
 
-### Conda常用操作
-
-```bash
-# 查看当前的 Conda 环境
-conda env list
-
-# 指定特定的 Python 版本, 创建指定名称的环境
-conda create -n ${ENV_NAME} python=3.x
-
-# 激活当前的 Conda 环境
-conda activate
-
-# 退出当前的 Conda 环境
-conda deactivate
-
-# 删除创建的环境
-conda env remove -n ${ENV_NAME}
+# 激活当前虚拟环境
+source .venv/bin/activate
 ```
 
 ## 2. Go 开发环境配置
@@ -113,31 +89,37 @@ rustup update stable
 
 > 参考: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install){target="_blank"}
 
-## 4. uv 工具
 
-uv 工具介绍: https://docs.astral.sh/uv/
-
-```bash
-# 下载安装
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-## 5. Java
+## 4. Java
 
 - JDK下载: [https://jdk.java.net/archive/](https://jdk.java.net/archive/){target="_blank"}
 - Maven包(包括 `mvnd` )下载: [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi){target="_blank"}
-- Maven加速: 
-  - 阿里云: [https://developer.aliyun.com/mvn/guide](https://developer.aliyun.com/mvn/guide){target="_blank"}
 
 ```bash
-# maven
-export MAVEN_HOME=/usr/local/apache-maven-3.x.x/
-export PATH=${PATH}:${MAVEN_HOME}/bin
+# ~/.bash_profile
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home
+export MAVEN_HOME=/opt/maven/apache-maven-3.9.9
+export PATH=$PATH:$MAVEN_HOME/bin
+```
 
-# java
-JAVA_HOME=/usr/local/java/jdk-x.x.x        
-JRE_HOME=/usr/local/java/jdk-x.x.x/jre     
-CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
-PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
-export JAVA_HOME JRE_HOME CLASS_PATH PATH
+- Maven加速: 
+    - 阿里云: [https://developer.aliyun.com/mvn/guide](https://developer.aliyun.com/mvn/guide){target="_blank"}
+
+```bash
+vim /opt/maven/apache-maven-3.9.9/conf/settings.xml
+```
+
+在 `<mirrors>xxx<</mirrors>>` 中添加 aliyun Maven加速库
+
+```xml
+<mirrors>
+  ......
+  <mirror>
+    <id>aliyunmaven</id>
+    <mirrorOf>*</mirrorOf>
+    <name>aliyun</name>
+    <url>https://maven.aliyun.com/repository/public</url>
+  </mirror>
+  ......
+</mirrors>
 ```
